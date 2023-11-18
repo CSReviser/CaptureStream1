@@ -107,7 +107,7 @@ namespace {
 //			int day = regexp.cap( 2 ).toInt();
 //			result = QString( " (%1/%2/%3)" ).arg( regexp.cap( 3 ) )
 //					.arg( month, 2, 10, QLatin1Char( '0' ) ).arg( day, 2, 10, QLatin1Char( '0' ) );
-			result = QString( " (2023/02/25)" ); 
+			result = QString( " (2023/04/06)" ); 
 		}
 		return result;
 	}
@@ -149,11 +149,11 @@ MainWindow::MainWindow( QWidget *parent )
 //	setMinimumHeight( maximumHeight() - menuBar()->height() );
 	setMaximumHeight( maximumHeight() );		// ダウンロードボタンが表示されない問題対策　2022/04/16 
 	setMinimumHeight( maximumHeight() );		// ダウンロードボタンが表示されない問題対策　2022/04/16
-	QRect rect = geometry();
+//	QRect rect = geometry();
 //	rect.setHeight( rect.height() - menuBar()->height() );
-	rect.setHeight( rect.height() );		// ダウンロードボタンが表示されない問題対策　2022/04/16
-	rect.moveTop( rect.top() + menuBar()->height() );	// 4.6.3だとこれがないとウィンドウタイトルがメニューバーに隠れる
-	setGeometry( rect );
+//	rect.setHeight( rect.height() );		// ダウンロードボタンが表示されない問題対策　2022/04/16
+//	rect.moveTop( rect.top() + menuBar()->height() );	// 4.6.3だとこれがないとウィンドウタイトルがメニューバーに隠れる
+//	setGeometry( rect );
 #endif
 #ifdef Q_OS_LINUX		// Linuxでは高さが足りなくなるので縦方向に伸ばしておく
 	menuBar()->setNativeMenuBar(false);	// メニューバーが表示されなくなったに対応

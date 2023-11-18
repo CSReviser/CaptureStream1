@@ -52,7 +52,9 @@ signals:
 
 private:
 	QStringList getAttribute( QString url, QString attribute );
+	QStringList getAttribute2( QString url, QString attribute, QString id_no );
 	QStringList getJsonData( QString url, QString attribute );
+	QStringList getJsonData2( QString url, QString attribute );
 	bool checkExecutable( QString path );
 	bool isFfmpegAvailable( QString& path );
 	bool istestAvailable( QString& path );
